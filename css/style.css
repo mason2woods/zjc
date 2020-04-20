@@ -398,6 +398,20 @@ li > a:only-child:after {
     min-height: 50em;
 }
 
+
+window.onload = window.onresize = function () {
+    resizeIframe();
+}
+var resizeIframe=function(){
+    var bodyw=document.body.clientWidth;
+    for(var ilength=0;ilength<=document.getElementsByTagName("iframe").length;ilength++){
+ 
+        document.getElementsByTagName("iframe")[ilength].height = bodyw*9/16;//设定高度
+ 
+    }
+}
+
+
 .layer {
     min-height: 50em;
     background: rgba(0, 0, 0, 0.42);
